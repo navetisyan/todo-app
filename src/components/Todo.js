@@ -18,11 +18,42 @@ export default function Todo() {
 
     }
 
+    const completeTodo = (id) => {
+        let updatedItems = items.map(item => {
+            if(item.id === id){
+                item.isComplete = !item.isComplete;
+            }
+            return item;
+        })
+
+        setItems(updatedItems);
+    }
+
+    const removeTodo = (id) => {
+        let updatedItems = [...items].filter(item => item.id !== id)
+
+        setItems(updatedItems);
+    }
+
+    const updateTodo = (id, newValue) => {
+        if(!newValue.text || !newValue.text.trim().length){
+            return;
+        }
+
+        setItems((prev) => prev.map( item => {return item.id === id ? newValue : item}));
+    }
+
+
     return (
         <div>
             <h1>Todo Reminder</h1>
             <TodoForm onSubmit = {addItem}/ >
-            <TodoList todos={items}/>
+            <TodoList 
+                    todos={items}        
+                    completeTodo={completeTodo}
+                    removeTodo={removeTodo}
+                    updateTodo={updateTodo}
+            />
         </div>
     )
 }
