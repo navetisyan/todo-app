@@ -18,7 +18,15 @@ body {
   padding-bottom: 30px;
 }
 
-.todo-form {
+.todo-menu {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+}
+
+.todo-form, .search-form {
   margin-bottom: 30px;
 }
 

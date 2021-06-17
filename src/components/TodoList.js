@@ -4,8 +4,6 @@ import TodoForm from './TodoForm'
 function TodoList({todos, completeTodo, removeTodo, updateTodo}) {
 
     const [edit, setEdit] = useState({id:null, value: ''});
-    console.log('todos==', todos);
-    debugger;
 
     const submitUpdate = value => {
         updateTodo(edit.id, value);
