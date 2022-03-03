@@ -24,7 +24,9 @@ function TodoList({todos, completeTodo, removeTodo, updateTodo}) {
                         <input type="checkbox" id={todo.id} name={todo.id} checked={todo.isComplete} onChange={() => completeTodo(todo.id)}/>
                         {todo.text}
                     </div>
-                    <button className='update-icon icon' onClick={()=> setEdit({id: todo.id, value: todo.text }) }>Update</button>
+                    <div className="update-box">
+                      <button className='update-icon icon' onClick={()=> setEdit({id: todo.id, value: todo.text }) }>Update</button>
+                      </div>
                     <div className='remove-icon icon' onClick={()=> removeTodo(todo.id)}>x</div>
                 </div>
                 )

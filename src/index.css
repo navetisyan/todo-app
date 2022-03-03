@@ -18,16 +18,16 @@ body {
   padding-bottom: 30px;
 }
 
-.todo-menu {
+/* .todo-menu {
   display: flex;
   width: 90%;
   justify-content: space-between;
   align-items: center;
   margin: 4px auto;
-}
+} */
 
 .todo-form, .search-form {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .todo-row {
@@ -52,4 +52,10 @@ label {
   display: flex;
 
 }
+
+.update-box{
+  margin-left: auto;
+  padding: 0 10px;
+}
+
 

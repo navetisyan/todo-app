@@ -51,7 +51,7 @@ export default function Todo() {
     return (
         <div>
             <h1>Todo Reminder</h1>
-            <div className="todo-menu">
+             <div className="todo-row"> {/*className="todo-menu" */}
                 <TodoForm onSubmit = {addItem}/ >
                 <SearchBar onSubmit={onSearchSubmit}/>
             </div>
